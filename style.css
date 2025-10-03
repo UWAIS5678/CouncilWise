@@ -1,0 +1,687 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  line-height: 1.6;
+  background: none;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #eda70f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+/* Utility */
+.full-width-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Background Image & Overlay */
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.page-content::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+  z-index: -1;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header-row {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo-image {
+  max-height: 100%;
+  width: auto;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #eda70f;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.634);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 20px;
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    z-index: 999;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.intro-block {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 0;
+}
+
+.intro-block > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hintro-block {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  animation: pulseWhite 3s ease-in-out infinite;
+  color: white;
+}
+
+@keyframes pulseWhite {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.button-group .btn {
+  margin: 0;
+  display: inline-block;
+}
+
+/* Buttons & Submit */
+.btn,
+.contact-section button[type="submit"] {
+  background-color: #eda70f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 5px 1.5px rgba(203, 146, 23, 0.5);
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0 auto;
+  font-size: 1rem;
+}
+
+.btn:hover,
+.contact-section button[type="submit"]:hover {
+  background-color: white;
+  color: #eda70f;
+  box-shadow: 0 0 12px 3px rgba(203, 146, 23, 0.85);
+}
+
+/* Team Toggle Button */
+.team-toggle-btn {
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pain Points */
+.hpain-points {
+  font-size: 2.5rem;
+  margin: 60px 0 40px;
+  text-align: center;
+}
+
+.pain-points {
+  flex: 1 1 220px;
+  background-color: rgba(13, 53, 68, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(203, 146, 23, 0.4);
+  padding: 20px 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.pain-points:hover,
+.pain-points.hovered {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(203, 146, 23, 0.6);
+}
+
+.pain-points ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.pain-points ul li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.pain-points ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #eda70f;
+  border-radius: 50%;
+}
+
+/* Solutions */
+.solution-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.solution-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.solution-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #eda70f;
+}
+
+.solution-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.solution-block {
+  flex: 1 1 220px;
+  max-width: 280px;
+  background-color: rgba(13, 53, 68, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(203, 146, 23, 0.4);
+  padding: 20px 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.solution-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(203, 146, 23, 0.6);
+}
+
+.solution-block img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Team Circle */
+.team-circle {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  margin: 2rem auto;
+  border-radius: 50%;
+  background: #00000094;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.orbit {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease, opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  background: rgba(0,0,0,0.2);
+}
+
+.orbit img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eda70f;
+  transition: all 0.3s ease;
+}
+.team-circle {
+  transition: width 0.4s ease, height 0.4s ease, background 0.3s ease;
+}
+
+.orbit {
+  transition: 
+    width 0.4s ease, 
+    height 0.4s ease, 
+    top 0.4s ease, 
+    left 0.4s ease, 
+    transform 0.4s ease;
+}
+
+.orbit img {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.orbit-name {
+  transition: 
+    font-size 0.3s ease, 
+    top 0.3s ease;
+}
+
+.orbit.focused {
+  transition: all 0.4s ease;
+}
+
+
+/* Positioning of orbits around circle */
+.orbit1 { top: 0%; left: 50%; transform: translate(-50%, 0); }
+.orbit2 { top: 30%; left: 85%; transform: translate(-50%, -50%); }
+.orbit3 { bottom: 30%; left: 85%; transform: translate(-50%, 50%); }
+.orbit4 { bottom: 5%; left: 50%; transform: translate(-50%, 0); }
+.orbit5 { bottom: 30%; left: 15%; transform: translate(-50%, 50%); }
+.orbit6 { top: 30%; left: 15%; transform: translate(-50%, -50%); }
+
+.orbit-name {
+  display: block;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orbit-name .member-name {
+  font-weight: bold;
+  font-size: 10px;
+  color: white;
+  display: block;
+  line-height: 1;
+}
+
+.orbit-name .member-role {
+  display: none;
+}
+
+/* Details hidden initially */
+.orbit-details {
+  display: none;
+  color: white;
+  text-align: center;
+}
+
+.orbit.focused {
+  /* keep your existing styles */
+  top: 5% !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  width: 335px;
+  height: 335px;  /* make height auto so it grows with content */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.orbit.focused img {
+  width: 110px;
+  height: 110px;
+  border-width: 3.5px;
+  border-radius: 50%;
+  margin-bottom: 10px; /* space below image */
+  margin-top: -20%; /* remove negative margin */
+}
+
+.orbit.focused .orbit-name {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: auto;
+  margin-bottom: 8px;
+  white-space: normal;
+  pointer-events: auto;
+  color: #eda70f;
+}
+
+.orbit.focused .orbit-name .member-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #eda70f;
+}
+
+.orbit.focused .orbit-name .member-role {
+  display: block;
+  font-size: 1rem;
+  color: #ffd17f;
+  margin-top: 2px; /* small gap */
+  line-height: 1.1;
+}
+
+.orbit.focused .orbit-details {
+  display: block;
+  font-size: 0.9rem;
+  max-height: 200px;
+  overflow-y: auto;
+  color: white;
+  text-align: center;
+  line-height: 1.4;
+  width: 100%;
+}
+
+/* Blur style when another is focused */
+.orbit.blur {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Contact Section */
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-hook {
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #eda70f;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section label {
+  font-weight: bold;
+  color: white;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.273);
+  color: white;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* Footer */
+.footer > div {
+  text-align: center;
+}
+
+.footer p,
+.footer-tagline {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.F-hr {
+  width: 95%;
+  height: 3px;
+  background-color: #eda70f;
+  border: none;
+  margin: 20px auto;
+  box-shadow: 0 0 5px 1.5px rgba(203, 146, 23, 0.5);
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact-icons img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  animation: pulseGlow 3s infinite;
+  transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.4));
+}
+
+.contact-icons a:hover img,
+.contact-icons a:active img,
+.contact-icons a.glowing img {
+  animation: none;
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  transform: scale(1.1);
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+/* Hidden utility */
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .team-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .orbit {
+    width: 60px;
+    height: 60px;
+  }
+
+  .orbit img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .orbit-name {
+    top: 70px;
+    font-size: 9px;
+  }
+
+  .orbit-name .member-name {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 600px) {
+  .orbit.focused {
+    width: 290px;
+    height: 290px;
+  }
+
+  .orbit.focused img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .orbit.focused .orbit-name .member-name {
+    font-size: 1.1rem;
+  }
+
+  .orbit.focused .orbit-name .member-role {
+    font-size: 0.8rem;
+  }
+    .orbit.focused .orbit-details {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}

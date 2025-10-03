@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CouncilWise - Making city services accessible and efficient." />
+  <link rel="icon" href="LOGO.png" type="image/png" />
+  <title>CouncilWise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <script defer>
+    // Fallback smooth scroll for anchor links
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Background -->
+  <img src="durban-city-2017-copy-large-NO2.jpg" class="bg-img" alt="Durban City skyline" loading="lazy">
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <!-- Header -->
+    <header class="header-row">
+      <div class="logo">
+        <a href="https://councilwise.org/">
+          <img src="LOGO.png" alt="CouncilWise Logo" class="logo-image" loading="lazy">
+        </a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#solutions">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="intro-block full-width-section">
+      <div class="content-wrapper">
+        <h1 class="hintro-block">Making City Services Simple</h1>
+        <p>No more confusing forms, delays, or endless queues. CouncilWise connects you directly to solutions that save you time, money, and stress.</p>
+        <div class="button-group">
+          <a href="#pain" class="btn">Learn More</a>
+          <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="full-width-section" id="pain">
+      <div class="content-wrapper">
+        <h2 class="hpain-points">Pain Points</h2>
+        <div class="pain-points">
+          <ul>
+            <li>Endless red tape and confusing processes</li>
+            <li>Struggling to get clear answers from the municipality</li>
+            <li>Wasted time on forms, calls, and follow-ups</li>
+            <li>Young people left without opportunities to grow</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solution-section full-width-section" id="solutions">
+      <div class="content-wrapper">
+        <h2>Our Solution</h2>
+        <p class="solution-subtitle">We help you cut through municipal bureaucracy and get results fast.</p>
+        <div class="solution-row">
+          <div class="solution-block">
+            <img data-gif="guidance.gif" alt="Clear Guidance" loading="lazy">
+            <div class="caption">Clear Guidance — we make municipal services easy to understand.</div>
+          </div>
+          <div class="solution-block">
+            <img data-gif="Processing.gif" alt="Faster Processes" loading="lazy">
+            <div class="caption">Faster Processes — no more going in circles, we cut through delays.</div>
+          </div>
+          <div class="solution-block">
+            <img data-gif="Opportunities.gif" alt="Real Opportunities" loading="lazy">
+            <div class="caption">Real Opportunities — creating jobs and internships for young people.</div>
+          </div>
+          <div class="solution-block">
+            <img data-gif="Mediation.gif" alt="Trusted Mediation" loading="lazy">
+            <div class="caption">Trusted Mediation — bridging the gap between the city and its citizens.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Team Button -->
+    <div class="team-button-wrapper">
+      <button class="btn team-toggle-btn">Meet the Team</button>
+    </div>
+
+<!-- Circular Team Layout -->
+<div class="team-circle hidden">
+  <div class="center-text">CouncilWise Team</div>
+
+  <div class="orbit orbit1" tabindex="0">
+    <img src="person1.png" alt="Photo of Hoosen Molla, Co‑Founder & Director" loading="lazy">
+    <div class="orbit-name">
+      <span class="member-name">Hoosen Molla</span>
+      <span class="member-role">Co‑Founder & Director</span>
+    </div>
+    <div class="orbit-details">
+      <p>30+ years at eThekwini Municipality, retired Senior Manager (iTrump, ABM). Expert in council matters, compliance, and ethics, driven to restore dignity to those in need.</p>
+    </div>
+  </div>
+
+  <div class="orbit orbit2" tabindex="0">
+    <img src="person2.png" alt="Photo of Muhammad Hoosen, Co‑Founder & Director" loading="lazy">
+    <div class="orbit-name">
+      <span class="member-name">Muhammad Hoosen</span>
+      <span class="member-role">Co‑Founder & Director</span>
+    </div>
+    <div class="orbit-details">
+      <p>MIS project manager with global experience, skilled in service delivery. Dedicated to empowering youth, communities, and driving innovation.</p>
+    </div>
+  </div>
+
+  <div class="orbit orbit3" tabindex="0">
+    <img src="person3.png" alt="Photo of Mbasa, Council & Client Relations" loading="lazy">
+    <div class="orbit-name">
+      <span class="member-name">Mbasa</span>
+      <span class="member-role">Council & Client Relations</span>
+    </div>
+    <div class="orbit-details">
+      <p>Handles council and client communication, progress updates, and ensures smooth, supportive interaction through every case.</p>
+    </div>
+  </div>
+
+  <div class="orbit orbit4" tabindex="0">
+    <img src="person4.png" alt="Photo of Fuzail, Field Liaison & Strategic Collaborations" loading="lazy">
+    <div class="orbit-name">
+      <span class="member-name">Fuzail</span>
+      <span class="member-role">Field Liaison & Strategic Collaborations</span>
+    </div>
+    <div class="orbit-details">
+      <p>Coordinates with municipal departments to fast-track approvals and resolve delays. Keeps projects on track by ensuring steady progress for clients.</p>
+    </div>
+  </div>
+
+  <div class="orbit orbit5" tabindex="0">
+    <img src="person5.png" alt="Photo of Tasneem, Business Finance & Property Coordinator" loading="lazy">
+    <div class="orbit-name">
+      <span class="member-name">Tasneem</span>
+      <span class="member-role">Business Finance & Property Coordinator</span>
+    </div>
+    <div class="orbit-details">
+      <p>Manages financial operations and property analysis, ensuring compliance and value retention. Provides clients with clear insights to support smart decisions.</p>
+    </div>
+  </div>
+
+  <div class="orbit orbit6" tabindex="0">
+    <img src="person6.png" alt="Photo of Daemean, MIS & Media" loading="lazy">
+    <div class="orbit-name">
+      <span class="member-name">Daemean</span>
+      <span class="member-role">MIS & Media</span>
+    </div>
+    <div class="orbit-details">
+      <p>Manages brand visibility, social media, and communication campaigns to keep CouncilWise connected and trusted.</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section full-width-section" id="contact">
+      <div class="content-wrapper">
+        <h2>Get in Touch</h2>
+        <p class="contact-hook">Have an issue with the municipality? Let us help you solve it — faster, easier, and stress‑free.</p>
+        <form action="https://getform.io/f/adrdmnea" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Describe your issue..." required></textarea>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <hr class="F-hr">
+      <div>
+        <p class="footer-tagline">Making City Services Simple for Everyone</p>
+      </div>
+
+      <div class="contact-icons">
+        <a href="https://wa.me/27645256483" target="_blank" aria-label="Chat on WhatsApp">
+          <img src="Whatsapp.png" alt="WhatsApp" loading="lazy">
+        </a>
+        <a href="mailto:info@councilwise.org" aria-label="Send Email" >
+          <img src="Email.png" alt="Email" loading="lazy">
+        </a>
+        <a href="tel:+27645256483" aria-label="Call Phone">
+          <img src="Phone.png" alt="Phone" loading="lazy">
+        </a>
+        <a href="https://www.google.com/maps/place/Westville,+KwaZulu-Natal" aria-label="View Location">
+          <img src="Location.png" alt="Location" loading="lazy">
+        </a>
+      </div>
+
+      <hr class="F-hr">
+      <p>© 2025 Council Wise. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
